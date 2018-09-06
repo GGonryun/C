@@ -94,7 +94,7 @@
   4. 🔥: Arithmetic operators associate [left to right](https://stackoverflow.com/questions/25589257/what-does-left-to-right-associativity-mean). 
 ### Section 2.6: Relational & Logical Operators
 * Relational Operators:
-  1. >, >=, <, <=
+  1. \>, >=, <, <=
 * Equality Operators:
   1. ==, !=
 * Logical Operators:
