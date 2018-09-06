@@ -4,6 +4,8 @@
 
 🔥: *lit*: self-explanatory.
 
+🦆: *undefined*: [things that are *implementation-defined* or *undefined* by c.](https://stackoverflow.com/questions/2397984/undefined-unspecified-and-implementation-defined-behavior).
+
 # Chapter 2:
 
 ### Section 2-1: Variable Names
@@ -77,19 +79,20 @@
   6. External & Static variables are initialized to 0 by default.
   7. The *qualifier* __const__ can be added to the declaration of a variable and denotes that the following variable will not be altered.
   8. 🔥: A __const__ declaration w/ array arguments indicates the function does not change the array. 
-  9. 🔥: the result when an attempt to make a change to a const is undefined by c .
-  10. [Definition of *"implementation-defined"* behavior](https://stackoverflow.com/questions/2397984/undefined-unspecified-and-implementation-defined-behavior).
+  9. 🦆: the result when an attempt to make a change to a const is undefined by c .
+  
 ### Section 2.5: Arithmetic Operators
 * Binary Arithmetic Operators:
   1. +, -, * , /, % (modulus).
-  2. 🔥: Integer division truncates any fractional part. The direction of truncation for / is undefined by c. (The direction is whether it rounds up or down) 
-  3. 🔥: % (*Modulus*) __cannot__ be applied to type *float* or *double*.
+  2. 🔥: Integer division truncates any fractional part. 
+  3. 🦆The direction of truncation for / is undefined by c. (The direction is whether it rounds up or down) 
+  4. 🔥: % (*Modulus*) __cannot__ be applied to type *float* or *double*.
 * 👀 Precedence Order (1 < 2 < 3 < 4):
   1. Binary +, - operators.
   2. Binary * , /, and & (modulus).
   3. Unary + and -
   4. 🔥: Arithmetic operators associate [left to right](https://stackoverflow.com/questions/25589257/what-does-left-to-right-associativity-mean). 
-### Section 2.6 Relational & Logical Operators
+### Section 2.6: Relational & Logical Operators
 * Relational Operators:
   1. >, >=, <, <=
 * Equality Operators:
@@ -104,5 +107,22 @@
   2. Relational Operators have a higher precedence than equality operators.
   3. 🔥: && precedence is higher than ||
   4. Ex: *(i < lim-1 && (c=getchar()) != '\n' && c != EOF)* In *(c=getchar()) != '\n'* we use parenthesis to ensure that c = getchar() is completed first. != has a higher precedence than the assignment =.
-
+  5. The numeric value of 1 is true, 0 is false. How we would expect it to be.
+  6. *!* as a unary operator acts as a 'not'. Changes 0 => 1 && 1 => 0
+### Section 2.7: Type Conversions
+* Rules
+  1. 🔥: In general automatic conversions will go from narrower to wider without losing info. (int -> float)
+  2. Expressions that don't make sense are not allowed.
+  3. Expressions that lose information will provide a warning. long => short.
+  4. 🔥: Chars are just domesticated ints.
+  5. 🦆: undefined specification by c of whether char's are unsigned or signed.
+  6. 👀: C guarantees => 
+    * printing characters are always positive
+    * characters in expressions are always positive.
+    * arbitrary bit patterns stored as a character variable? who knows!
+  7. 👌: __always specify signed or unsigned char values!__
+* 👀 <ctype.h>
+  1. Gives us helper functions, *tests & conversions*, that are independent of the character set like ASCII.
+  2. isdigit(c) - checks if a value is a #
+  3. lower(c) - makes a letter lowercase.
   
