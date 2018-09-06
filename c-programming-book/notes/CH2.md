@@ -111,30 +111,37 @@
   6. *!* as a unary operator acts as a 'not'. Changes 0 => 1 && 1 => 0
 ### Section 2.7: Type Conversions
 * Rules
+  0. 🔥__Explicit Conversions (casting):__ '(cast) expression'
+      * *note: casting acts as if we had just redeclared & intialized the variable to the new type of cast.*
   1. 🔥: In general automatic conversions will go from narrower to wider without losing info. (int -> float)
   2. Expressions that don't make sense are not allowed.
   3. Expressions that lose information will provide a warning. long => short.
+  4. Type conversions take place during assignments: __value__ of the *right* is converted to the __type__ of the *left*.
+  5. __Sign Extension:__ [perserving the numbers sign by extending its leftmost bit.](https://en.wikipedia.org/wiki/Sign_extension)
+  6. Larger integers are converted to smaller integers by dropping *excess higher order bits*.
+  7. Type conversions take place when arguments are passed to functions.
+      * function prototypes automatically cast arguments to the specified type.
 * Char Expressions:
   1. 🔥: Chars are just domesticated ints.
   2. 🦆: undefined specification by c of whether char's are unsigned or signed.
-  3. 👀: C guarantees => 
+  3. 👀: Char signed/unsigned guarantees: 
      * printing characters are always positive
      * characters in expressions are always positive.
      * arbitrary bit patterns stored as a character variable? who knows!
   4. 👌: __always specify signed or unsigned char values!__
-* Relational Expressions (&&, >, ==, etc):
+ * Relational Expressions (&&, >, ==, etc):
   1. they will have a value of 1 if true and 0 if false when evaluated.
-  2. 🔥: for a value of *true* we simply mean *non-zero*.
+  2. For a value of *true* we simply mean *non-zero*.
 * Arithmetic Conversions
   1. if the operands are different types => *lower* is __promoted__ to *higher* __before__ the operation begins.
-  2. 
-  3. 👀: __General Rules Of Conversions:__
+  2. 👀: __General Rules Of Conversions:__
       * If either operand is long double, convert the other to long double. 
       * Otherwise, if either operand is double, convert the other to double. 
       * Otherwise, if either operand is float, convert the other to float. 
       * Otherwise, convert char and short to int. 
       * Then, if either operand is long, convert the other to long. 
       * *Detailed information can be found in Section 6 of Appendix A*;
+  3. 🦆: signed and unsigned comparisons are undefined by c.
 * 👀 <ctype.h>
   1. Gives us helper functions, *tests & conversions*, that are independent of the character set like ASCII.
   2. isdigit(c) - checks if a value is a #
