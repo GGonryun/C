@@ -117,9 +117,9 @@
   4. 🔥: Chars are just domesticated ints.
   5. 🦆: undefined specification by c of whether char's are unsigned or signed.
   6. 👀: C guarantees => 
-    * printing characters are always positive
-    * characters in expressions are always positive.
-    * arbitrary bit patterns stored as a character variable? who knows!
+     * printing characters are always positive
+     * characters in expressions are always positive.
+     * arbitrary bit patterns stored as a character variable? who knows!
   7. 👌: __always specify signed or unsigned char values!__
 * 👀 <ctype.h>
   1. Gives us helper functions, *tests & conversions*, that are independent of the character set like ASCII.
