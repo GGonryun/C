@@ -114,13 +114,27 @@
   1. 🔥: In general automatic conversions will go from narrower to wider without losing info. (int -> float)
   2. Expressions that don't make sense are not allowed.
   3. Expressions that lose information will provide a warning. long => short.
-  4. 🔥: Chars are just domesticated ints.
-  5. 🦆: undefined specification by c of whether char's are unsigned or signed.
-  6. 👀: C guarantees => 
+* Char Expressions:
+  1. 🔥: Chars are just domesticated ints.
+  2. 🦆: undefined specification by c of whether char's are unsigned or signed.
+  3. 👀: C guarantees => 
      * printing characters are always positive
      * characters in expressions are always positive.
      * arbitrary bit patterns stored as a character variable? who knows!
-  7. 👌: __always specify signed or unsigned char values!__
+  4. 👌: __always specify signed or unsigned char values!__
+* Relational Expressions (&&, >, ==, etc):
+  1. they will have a value of 1 if true and 0 if false when evaluated.
+  2. 🔥: for a value of *true* we simply mean *non-zero*.
+* Arithmetic Conversions
+  1. if the operands are different types => *lower* is __promoted__ to *higher* __before__ the operation begins.
+  2. 
+  3. 👀: __General Rules Of Conversions:__
+      * If either operand is long double, convert the other to long double. 
+      * Otherwise, if either operand is double, convert the other to double. 
+      * Otherwise, if either operand is float, convert the other to float. 
+      * Otherwise, convert char and short to int. 
+      * Then, if either operand is long, convert the other to long. 
+      * *Detailed information can be found in Section 6 of Appendix A*;
 * 👀 <ctype.h>
   1. Gives us helper functions, *tests & conversions*, that are independent of the character set like ASCII.
   2. isdigit(c) - checks if a value is a #
