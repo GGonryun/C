@@ -146,4 +146,6 @@
   1. Gives us helper functions, *tests & conversions*, that are independent of the character set like ASCII.
   2. isdigit(c) - checks if a value is a #
   3. lower(c) - makes a letter lowercase.
-  
+### Section 2.8: Increment & Decrement Operators.
+  1. ++n: increments n __before__ the value is used. *prefix*
+  2. n++: increments n __after__ the value is used. *suffix*
