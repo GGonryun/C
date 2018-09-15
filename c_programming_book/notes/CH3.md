@@ -13,7 +13,9 @@
   
 ### Section 3-2: If-Else
   * Syntax:
-      ~~~~ if (expression)
+      ~~~~ 
+      if (expression)
        statement1
       else
-       statement2 ~~~~
+       statement2 
+       ~~~~
