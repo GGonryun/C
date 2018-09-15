@@ -26,15 +26,15 @@
 ### Section 3-3 Else-If
   * Syntax:
     ~~~~
-   if (expression)
+    if (expression)
        statement
-   else if (expression)
+    else if (expression)
        statement
-   else if (expression)
+    else if (expression)
        statement
-   else if (expression)
+    else if (expression)
        statement
-   else
+    else
        statement
     ~~~~
     
