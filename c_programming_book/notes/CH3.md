@@ -63,4 +63,4 @@
       statements
     ~~~~
   
-  
+  * 👌: Keep those loops simple, it is bad style to place unrelated computations into intialization or incrementation fields of a loop. save it for another place.
