@@ -25,7 +25,7 @@
   
 ### Section 3-3 Else-If
   * Syntax:
-    ~~~~~
+    ~~~~
    if (expression)
        statement
    else if (expression)
@@ -36,6 +36,5 @@
        statement
    else
        statement
-    ~~~~~
+    ~~~~
     
-    *
