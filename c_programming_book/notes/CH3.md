@@ -64,3 +64,20 @@
     ~~~~
   
   * 👌: Keep those loops simple, it is bad style to place unrelated computations into intialization or incrementation fields of a loop. save it for another place.
+### Section 3-6: Loops - Do-While
+  * Syntax:
+    ~~~~
+    do
+       statement
+    while (expression);
+    ~~~~
+### Section 3-7: Break & Continue:
+  * 👌: Goto's are never necessary.
+  * syntax:
+    ~~~~
+    if (disaster)
+      goto error;
+    //somecode  
+    error:
+      /* more code */
+    ~~~~
