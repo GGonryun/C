@@ -19,3 +19,23 @@
       else
        statement2 
        ~~~~
+  * 🔥: *True always means non-zero*
+  * if an *else* is associated with the closest *else-less* *if*-statement.
+  * 👌: Always use braces with nested *ifs*!
+  
+### Section 3-3 Else-If
+  * Syntax:
+    ~~~~~
+   if (expression)
+       statement
+   else if (expression)
+       statement
+   else if (expression)
+       statement
+   else if (expression)
+       statement
+   else
+       statement
+    ~~~~~
+    
+    *
