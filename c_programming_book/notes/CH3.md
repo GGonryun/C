@@ -23,7 +23,7 @@
   * if an *else* is associated with the closest *else-less* *if*-statement.
   * 👌: Always use braces with nested *ifs*!
   
-### Section 3-3 Else-If
+### Section 3-3: Else-If
   * Syntax:
     ~~~~
     if (expression)
@@ -37,4 +37,30 @@
     else
        statement
     ~~~~
-    
+### Section 3-4: Switch
+  * Syntax
+    ~~~~
+    switch (expression) {
+      case const-expression:
+        statements
+        (optional break;)
+      case const-expression:
+        statements
+      default:
+        statements
+    }
+    ~~~~  
+  * 👌: Always put a break after the last case.
+### Section 3-5: Loops - While & For
+  * While Loop Syntax:
+    ~~~~
+    while(expression)
+      statement
+    ~~~~
+  * For Loop Syntax
+    ~~~~
+    for(exp1 ; exp 2 ; exp3)
+      statements
+    ~~~~
+  
+  
