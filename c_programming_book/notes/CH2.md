@@ -149,4 +149,33 @@
 ### Section 2.8: Increment & Decrement Operators.
   1. ++n: increments n __before__ the value is used. *prefix*
   2. n++: increments n __after__ the value is used. *suffix*
-### Section 2.9: 
+### Section 2.9: Bitwise Operators
+  1. &, | (or), ^ (xor), <<, >>, ~(ones compliment)
+  2. << left shift is equivalent to * 2(n) where n is how many bits we left shift by.
+  3. 🦆: the bits pushed onto the number with right shifting is undefined by c.
+### Section 2.10: Assignment Operators & Expressions
+  1. expr1 op= expr2 is equivalent to  expr1 = (expr1) op (expr2)
+        * Where op can be any of:   +   -   *   /   %   <<   >>   &   ^   |
+### Section 2.11: Conditional Expressions
+  1. expr1 ? expr2 : expr3
+  2. the expression expr1 is evaluated first. If it is non-zero (true), then the expression expr2 is evaluated, and that is the value of the conditional expression. Otherwise expr3 is evaluated, and that is the value.
+### Section 2.12: Precedence and Order of Evaluation:
+  1. () [] -> .                                 left to right
+  2. ! ~ ++ -- + - * (type) sizeof              right to left
+  3. * / %                                      left to right
+  4. + -                                        left to right
+  5. <<  >>                                     left to right
+  6. < <= > >=                                  left to right
+  7. == !=                                      left to right
+  8. &                                          left to right
+  9. ^                                          left to right
+  10. |                                         left to right
+  11. &&                                        left to right
+  12. ||                                        left to right
+  13. ?:                                        right to left
+  14. = += -= \*= /= %= &= ^= |= <<= >>=        right to left
+  15. ,                                         left to right
+  
+  16. 🦆: Any expression involving side-effects such as function calls, increment, decrement, nested assignemnt structures, etc will be executed different order for each compiler.
+  
+  17. 👌: The moral is that writing code that depends on order of evaluation is a bad programming practice in any language. 
