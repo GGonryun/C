@@ -6,4 +6,4 @@
       * *p points to value*.
   2) \*
       * dereferencing operator, it accesses the object the pointer is pointing to.
-      * *mnemonic: "int *ip;" a.k.a. *ip is an int *
+      * mnemonic: *"int \*ip;" a.k.a. \*ip is an int* 
